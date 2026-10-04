@@ -1,0 +1,18 @@
+# Build artifacts and dependencies
+backend/target/
+backend/apache-maven-*/
+frontend/node_modules/
+frontend/dist/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Lab | Research Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>Cloud Lab</span>
+      </a>
+      <div class="topbar-meta"><span class="status-dot"></span>Research workbench <span class="divider"></span> v0.1</div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">CLOUD COMPUTING PROJECTS <span>•</span> 2026</p>
+        <h1>One workspace.<br><em>Two directions.</em></h1>
+        <p class="intro-copy">Choose a research track to explore its workflow, cloud services, and machine learning capabilities.</p>
+      </section>
+
+      <section class="workspace" aria-label="Project selector">
+        <nav class="project-tabs" role="tablist" aria-label="Projects">
+          <button class="project-tab active" id="tab-ecg" role="tab" aria-selected="true" aria-controls="panel-ecg" data-project="ecg">
+            <span class="tab-letter">A</span>
+            <span class="tab-text"><strong>ECG analysis</strong><small>Signal intelligence</small></span>
+            <span class="tab-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="project-tab" id="tab-protein" role="tab" aria-selected="false" aria-controls="panel-protein" data-project="protein">
+            <span class="tab-letter">B</span>
+            <span class="tab-text"><strong>Protein structure</strong><small>Sequence intelligence</small></span>
+            <span class="tab-arrow" aria-hidden="true">↗</span>
+          </button>
+        </nav>
+
+        <article class="project-panel" id="panel-ecg" role="tabpanel" aria-labelledby="tab-ecg">
+          <div class="panel-main">
+            <div class="panel-heading">
+              <div><p class="panel-kicker">PROJECT A / HEALTH CARE</p><h2>ECG analysis<br><span>in the cloud</span></h2></div>
+              <span class="panel-index">01 <i>/</i> 02</span>
+            </div>
+            <p class="panel-description">Turn raw heart signals into an understandable first-pass screening report using a hosted machine learning model.</p>
+            <div class="feature-grid">
+              <div class="feature"><span class="feature-no">01</span><strong>Upload signal</strong><p>Accept ECG CSV files from the browser and validate their format.</p></div>
+              <div class="feature"><span class="feature-no">02</span><strong>Classify rhythm</strong><p>Preprocess the signal and predict normal or abnormal rhythm.</p></div>
+              <div class="feature"><span class="feature-no">03</span><strong>Review history</strong><p>Keep results and timestamps in a cloud database for comparison.</p></div>
+            </div>
+            <button class="primary-button" id="launch-ecg">Open ECG workspace <span>→</span></button>
+          </div>
+          <aside class="panel-aside">
+            <div class="signal-art" aria-label="Decorative ECG waveform"><div class="signal-line"></div><span class="signal-label">LIVE SIGNAL / 72 BPM</span></div>
+            <div class="service-stack"><p class="aside-label">CLOUD STACK</p><div><span>Storage</span><strong>Object bucket</strong></div><div><span>Compute</span><strong>ML inference API</strong></div><div><span>Data</span><strong>PostgreSQL</strong></div></div>
+          </aside>
+        </article>
+
+        <article class="project-panel hidden" id="panel-protein" role="tabpanel" aria-labelledby="tab-protein">
+          <div class="panel-main">
+            <div class="panel-heading"><div><p class="panel-kicker">PROJECT B / BIOLOGY</p><h2>Protein structure<br><span>prediction</span></h2></div><span class="panel-index">02 <i>/</i> 02</span></div>
+            <p class="panel-description">Submit an amino-acid sequence and connect it to a cloud-hosted prediction workflow that returns a visualizable structure.</p>
+            <div class="feature-grid"><div class="feature"><span class="feature-no">01</span><strong>Submit sequence</strong><p>Validate amino-acid input and create a trackable prediction job.</p></div><div class="feature"><span class="feature-no">02</span><strong>Run prediction</strong><p>Send long-running work to a queue and GPU-ready compute service.</p></div><div class="feature"><span class="feature-no">03</span><strong>Inspect result</strong><p>Store PDB output and make the result available for download.</p></div></div>
+            <button class="primary-button" id="launch-protein">Open protein workspace <span>→</span></button>
+          </div>
+          <aside class="panel-aside protein-aside"><div class="protein-art" aria-label="Decorative protein structure"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="service-stack"><p class="aside-label">CLOUD STACK</p><div><span>Storage</span><strong>Object bucket</strong></div><div><span>Compute</span><strong>GPU job runner</strong></div><div><span>Data</span><strong>Prediction archive</strong></div></div></aside>
+        </article>
+      </section>
+
+      <section class="architecture"><p class="eyebrow">SHARED ARCHITECTURE</p><div class="architecture-flow"><span>Browser</span><b>→</b><span>FastAPI</span><b>→</b><span>ML service</span><b>→</b><span>Cloud storage</span></div><p>One backend pattern keeps both research tracks ready for deployment.</p></section>
+    </main>
+    <footer><span>Cloud Lab / student research platform</span><span>Built for exploration, not diagnosis</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

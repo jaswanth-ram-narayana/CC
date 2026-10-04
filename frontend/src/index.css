@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #172033;
+    background: #edf4f3;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  }
+
+  html {
+    background: #edf4f3;
+  }
+
+  body {
+    @apply text-slate-900;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #edf4f3;
+    background-image:
+      linear-gradient(rgba(15, 118, 110, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 118, 110, 0.045) 1px, transparent 1px),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(226, 241, 239, 0.8));
+    background-size: 32px 32px, 32px 32px, 100% 100%;
+  }
+
+  button {
+    font: inherit;
+  }
+}
