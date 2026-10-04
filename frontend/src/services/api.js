@@ -9,6 +9,14 @@ const api = axios.create({
     baseURL: API_BASE_URL,
 });
 
+export const getDatasets = async () => {
+    const response = await api.get('/datasets');
+    return response.data;
+};
+
+export const getDatasetDownloadUrl = (datasetId) =>
+    `${API_BASE_URL}/datasets/${encodeURIComponent(datasetId)}/download`;
+
 const LOCAL_SAMPLE_ECG = `time,value
 0.00,0.02
 0.01,0.04

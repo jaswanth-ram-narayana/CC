@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DatasetLibrary from '../components/DatasetLibrary';
 import ECGAnalysis from '../components/ECGAnalysis';
 import ProteinPrediction from '../components/ProteinPrediction';
 import RespiratoryAnalysis from '../components/RespiratoryAnalysis';
@@ -112,6 +113,7 @@ export default function Dashboard() {
       <section className="capabilities-section" id="modules"><div className="section-heading"><div><p className="section-kicker">THE PLATFORM</p><h2>Three ways to investigate.</h2></div><p className="section-note">Hover a capability to explore its scope.<br/>Choose any feature to see what it does.</p></div>
         <div className="module-grid">{Object.entries(modules).map(([id, data]) => <ModuleCard key={id} id={id} data={data} />)}</div>
       </section>
+      <DatasetLibrary />
       <section className="platform-note"><span className="platform-note__icon"><Activity size={18}/></span><div><b>Built for thoughtful analysis.</b><p>Clear workflows, visible methods, and focused tools for biomedical exploration.</p></div><span className="platform-note__tag">CLOUD BIOMED · 2025</span></section>
     </main><footer className="site-footer"><span>© Cloud BioMed</span><span>Biomedical analysis workspace</span><span className="footer-status"><span className="status-dot"/> All systems local</span></footer>
   </div>;

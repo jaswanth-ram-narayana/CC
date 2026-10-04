@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api/protein")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "${app.cors.allowed-origin}")
 public class ProteinController {
 
     private final ProteinService proteinService;

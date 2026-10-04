@@ -10,6 +10,9 @@ frontend/dist/
 !.env.example
 backend/.env
 backend/.env.*
+data/
+*.pem
+*.key
 
 # Editor and operating-system files
 .idea/

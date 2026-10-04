@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/api/ecg")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "${app.cors.allowed-origin}")
 public class ECGController {
 
     private final ECGService ecgService;
